@@ -1,0 +1,126 @@
+---
+---
+
+@import "bootstrap/bootstrap";
+@import "base";
+
+label {
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+input {
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+img {
+  width: 100%;
+}
+
+#subtitle-style {
+  font-weight: 200;
+}
+
+#content h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+#content h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-media-icon {
+  height: 50px;
+  width: 50px;
+}
+
+ul#results-container {
+  padding: 0;
+  list-style-type: none;
+}
+
+#results-container li {
+  margin-bottom: 1.5rem;
+}
+
+span.post-meta {
+  font-size: 1rem;
+}
+
+#navbar_top {
+  position: -webkit-sticky;
+  position: sticky !important;
+  top: 0;
+}
+
+.nav-link.active {
+  color: red;
+}
+
+$color-code-background: #272822;
+$color-code-color: #f8f8f2;
+
+code {
+  background-color: $color-code-background;
+  color: $color-code-color;
+  border-radius: 0.3rem;
+  padding: 4px 5px 5px;
+  white-space: nowrap;
+}
+
+pre {
+  background-color: $color-code-background;
+  padding: 5px;
+  border-radius: 0.3em;
+}
+
+pre code {
+  white-space: inherit;
+}
+
+#output-frontmatter {
+  color: white;
+}
+
+#output-frontmatter {
+  color: white;
+}
+
+#markdown-code {
+  color: $color-code-color;
+}
+
+#autofill-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+}
+
+#autofill-list li {
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+#autofill-list li:hover {
+  background-color: lightgray;
+}
+
+#map-container {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  margin-top: 20px;
+  position: relative;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#filter-title {
+  font-weight: bold;
+  font-size: large;
+}

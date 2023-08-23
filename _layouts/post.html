@@ -1,0 +1,25 @@
+---
+layout: page
+---
+
+<div class="container">
+  <div class="row">
+    <div class="article-title">
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.date }}</p>
+    </div>
+
+    <div class="col-md-8 offset-md-2 col-lg-3 offset-lg-5">
+      <article>
+        <div class="content">
+          <!-- Blog post content here -->
+          {{ content }}
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<div>
+  <a href="{{ site.url }}{{ site.baseurl }}/blog.html">Back to blog</a>
+</div>

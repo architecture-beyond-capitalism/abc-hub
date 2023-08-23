@@ -1,0 +1,313 @@
+---
+layout: page
+title: "Blog Post Submissions"
+---
+
+<div id="base-url" data-base-url="{{site.url}}{{site.baseurl}}"></div>
+
+<div class="row">
+  <h1>Blog Post Submission Form</h1>
+  <p>
+    Fill out the fields below to generate and format the metadata to be copied
+    and pasted at the the top of your submission markdown file. Download the
+    template markdown files and directory with the button below.
+  </p>
+  <div class="my-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      id="submission-templates"
+      onclick="window.location.href= 'https://drive.google.com/drive/folders/1c7yiG8YXjJZJIwHXgH4sCKIQa-DcZmPP?usp=sharing';"
+    >
+      Get Submission Templates
+    </button>
+  </div>
+  <div class="col-md-12">
+    <form>
+      <h4>Basic Info</h4>
+      <p>
+        The information you provide below will be rendered on the Hub in various
+        formats your post easier to discover. The primary content of your
+        post will still be the body of the post you submit. You
+        contributor name and unique id should match your community profile. If
+        you haven't submitted a community profile, submit that first
+        <a href="{{site.url}}{{site.baseurl}}/submissions-profile">here.</a> For
+        submissions with multiple contributing authors, you will manually add
+        their information to the markdown file. All contributors will need to
+        submit profiles to have their profile link to a post.
+      </p>
+      <div class="row mb-3 align-items-end">
+        <div class="col-md-6">
+          <label for="title" class="form-label">
+            Title (Keep it short, descriptive, and sweet (7 words max)
+          </label>
+          <input type="text" class="form-control" id="title" name="title" />
+        </div>
+        <div class="col-md-6">
+          <label for="subtitle" class="form-label"
+            >Sub-Title (add additional context)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="subtitle"
+            name="subtitle"
+          />
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col-md-12">
+          <label for="abstract-short" class="form-label"
+            >Short Description (no longer than 300 characters, roughly 50
+            words)</label
+          >
+          <textarea
+            type="text"
+            class="form-control"
+            id="abstract-short"
+            name="abstract-short"
+            rows="2"
+            cols="50"
+            maxlength="300"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col-md-5">
+          <label for="author-first" class="form-label"
+            >*Contributor First Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="author-first"
+            name="author-first"
+          />
+        </div>
+        <div class="col-md-5">
+          <label for="author-last" class="form-label"
+            >Contributor Last Name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="author-last"
+            name="author-last"
+          />
+        </div>
+        <div class="col-md-2">
+          <label for="author-date" class="form-label"
+            >*Two Digit Unique ID:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="author-date"
+            name="author-date"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h4>Post Information</h4>
+      <form>
+        <div class="row mb-3 align-items-end">
+          <div class="col">
+            <label for="content-type" class="form-label"
+              >Post Content Type:</label
+            >
+            <select
+              id="content-type"
+              class="form-control"
+              onchange="handleSelection()"
+            >
+              <option value="default" selected>
+                Select the most relevant option
+              </option>
+              <option value="Event">Event</option>
+              <option value="Resource Post Notice">Resource Post Notice</option>
+              <option value="Call to Action">Call to Action</option>
+              <option value="News">News</option>
+              <option value="Reviews">Review</option>
+              <option value="Classifieds">Classifieds</option>
+              <option value="Op-Ed">Op-Ed</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3 align-items-end">
+          <div class="col">
+            <label for="categories-other" class="form-label"
+              >If other, provide a preferred role below.</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="categories-other"
+              name="categories-other"
+            />
+          </div>
+        </div>
+        <div class="row mb-3 align-items-end">
+          <div class="col">
+            <label for="submission-year" class="form-label"
+              >Submission Year</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="submission-year"
+              name="submission-year"
+            />
+          </div>
+        </div>
+        <h4>Post Connections</h4>
+        <p>
+          Connect your post with other ideas and actions with tags and
+          hashtags. Providing them will help other connect to and benefit from
+          your post. describe the ideas that related to your post. See the
+          <a href="{{ site.url }}{{ site.baseurl }}/index">Resources</a>
+          page for examples. If you create tags that are not currently present, we
+          ask that you also submit an
+          <a href="{{ site.url }}{{ site.baseurl }}/ideas">ideas</a> entry
+          <a href="{{ site.url }}{{ site.baseurl }}/submssion-idea">here</a>
+        </p>
+        <div class="row mb-3 align-items-end">
+          <div class="col">
+            <label for="tags" class="form-label"
+              >Tags (lowercase and separated by commas)</label
+            >
+            <input type="text" class="form-control" id="tags" name="tags" />
+          </div>
+        </div>
+        <div class="row mb-3 align-items-end">
+          <div class="col">
+            <label for="hashes" class="form-label"
+              >Social Media Hashtags (without '#' and separate with commas and no
+              spaces)</label
+            >
+            <input type="text" class="form-control" id="hashes" name="hashes" />
+          </div>
+        </div>
+        <div class="row mb-3 align-items-end">
+          <div class="col">
+            <label for="place"
+              >Place associated with the post (if applicable)</label
+            >
+            <input
+              type="text"
+              id="place"
+              name="place"
+              placeholder="Enter a place"
+              oninput="autofillPlace()"
+            />
+            <ul id="autofill-list"></ul>
+          </div>
+        </div>
+    <div class="col-md-8">
+      <!-- code display area -->
+      <div class="my-4" id="code-display">
+        <div class="row mb-2">
+          <div class="col-12 text-end">
+            <button
+              type="button"
+              class="btn btn-sm btn-light"
+              onclick="copyToClipboard()"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <pre class="p-3 mb-0 rounded"><code id="output-frontmatter"></code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-12">
+    <p>
+      The card below will give you a rough idea as to how your content will
+      appear on the
+      <a href="{{site.url}}{{site.baseurl}}/blog">blog</a> page. You
+      will provide your own main image with your submission. Please refer to the
+      notes in the copied metadata for more detailed information.
+    </p>
+    <div class="my-4" id="output-htmlCard"></div>
+  </div>
+</div>
+
+<!-- Custom Java Script function importing -->
+
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/generateFrontmatterBlog.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/generateCardBlog.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/autofillPlace.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/copyToClipboard.js"></script>
+
+<!--  External Java Script Libraries that are downloaded and in repository -->
+
+<script
+  src="{{ site.url }}{{ site.baseurl }}/assets/js/marked.min.js"
+  async
+></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/purify.min.js"></script>
+
+<!-- External Java Script Libraries that are referenced directly from the web -->
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+<!-- Form Inputs and Event Listeners-->
+
+<script>
+  // get references to form input elements
+  const titleInput = document.getElementById("title");
+  const subtitleInput = document.getElementById("subtitle");
+  const contenttypeInput = document.getElementById("content-type");
+  const authorfirstInput = document.getElementById("author-first");
+  const authorlastInput = document.getElementById("author-last");
+  const authordateInput = document.getElementById("author-date");
+  const categoriesotherInput = document.getElementById("categories-other");
+  const tagsInput = document.getElementById("tags");
+  const hashesInput = document.getElementById("hashes");
+  const abstractshortInput = document.getElementById("abstract-short");
+  const learning1Input = document.getElementById("learning1");
+  const submissionyearInput = document.getElementById("submission-year");
+  // add event listener to each form input to generate frontmatter
+  titleInput.addEventListener("input", generateFrontmatterBlog);
+  subtitleInput.addEventListener("input", generateFrontmatterBlog);
+  contenttypeInput.addEventListener("input", generateFrontmatterBlog);
+  authorfirstInput.addEventListener("input", generateFrontmatterBlog);
+  authorlastInput.addEventListener("input", generateFrontmatterBlog);
+  authordateInput.addEventListener("input", generateFrontmatterBlog);
+  categoriesotherInput.addEventListener("input", generateFrontmatterBlog);
+  tagsInput.addEventListener("input", generateFrontmatterBlog);
+  hashesInput.addEventListener("input", generateFrontmatterBlog);
+  abstractshortInput.addEventListener("input", generateFrontmatterBlog);
+  learning1Input.addEventListener("input", generateFrontmatterBlog);
+  submissionyearInput.addEventListener("input", generateFrontmatterBlog);
+
+  // add event listener to each form input to generate
+  titleInput.addEventListener("input", generateCard);
+  subtitleInput.addEventListener("input", generateCard);
+  contenttypeInput.addEventListener("input", generateCard);
+  authorfirstInput.addEventListener("input", generateCard);
+  authorlastInput.addEventListener("input", generateCard);
+  authordateInput.addEventListener("input", generateCard);
+  categoriesotherInput.addEventListener("input", generateCard);
+  tagsInput.addEventListener("input", generateCard);
+  hashesInput.addEventListener("input", generateCard);
+  abstractshortInput.addEventListener("input", generateCard);
+  abstractlongInput.addEventListener("input", generateCard);
+  learning1Input.addEventListener("input", generateCard);
+  submissionyearInput.addEventListener("input", generateCard);
+</script>
+
+<script>
+  function handleSelection() {
+    var dropdown = document.getElementById("content-type");
+    var selectedValue = dropdown.value;
+    // Perform actions based on the selected value
+    console.log("Selected value:", selectedValue);
+  }
+</script>

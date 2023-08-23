@@ -1,0 +1,396 @@
+---
+layout: page
+title: "Profile Submissions"
+---
+
+<div id="base-url" data-base-url="{{site.url}}{{site.baseurl}}"></div>
+<div class="row">
+  <h1>Community Profile Submission Form</h1>
+  <p>
+    First, download the
+    <a
+      href="https://drive.google.com/drive/folders/1c7yiG8YXjJZJIwHXgH4sCKIQa-DcZmPP?usp=sharing"
+      >template markdown files and directories</a
+    >
+    with the button below. Then fill out the fields below to generate and format
+    metadata. Once finished, copy and paste into the appropriate markdown file
+    from the templates.
+  </p>
+  <div class="my-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      id="submission-templates"
+      onclick="window.location.href= 'https://drive.google.com/drive/folders/1c7yiG8YXjJZJIwHXgH4sCKIQa-DcZmPP?usp=sharing';"
+    >
+      Get Submission Templates
+    </button>
+  </div>
+  <div class="col-md-12">
+    <form>
+      <h4>Basic Info</h4>
+      <p>
+        If creating a profile for an organization of community, add the full
+        name (without special characters) into the "First Name" input and leave
+        "Last Name" input blank. Asterisks signify required fields. The "Unique
+        ID" should be an easy to remember two digit number that will be appended
+        to your name to form your unique profile name.
+      </p>
+      <div class="row mb-3">
+        <div class="col-md-3 align-items-end">
+          <label for="author-first" class="form-label">*First Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="author-first"
+            name="author-first"
+          />
+        </div>
+        <div class="col-md-3">
+          <label for="author-last" class="form-label">Last Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="author-last"
+            name="author-last"
+          />
+        </div>
+        <div class="col">
+          <label for="pronouns" class="form-label">Pronouns:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="pronouns"
+            name="pronouns"
+          />
+        </div>
+        <div class="col">
+          <label for="author-date" class="form-label"
+            >*Two Digit Unique ID:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="author-date"
+            name="author-date"
+          />
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="categories" class="form-label">Profile Type:</label>
+          <select id="categories" class="form-select">
+            <option value="Individual" selected>Individual</option>
+            <option value="Non-Profit Organization">
+              Non-Profit Organization
+            </option>
+            <option value="Business">Business</option>
+            <option value="Non-Governmental Organization">
+              Non-Governmental Organization
+            </option>
+            <option value="Academic Institution">Academic Institution</option>
+            <option value="Place-Based Community">Place-Based Community</option>
+            <option value="Interest-Based Community">
+              Interest-Based Community
+            </option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="categories-other" class="form-label"
+            >If other, provide a category that best suites you below.</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="categories-other"
+            name="categories-other"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-4">
+    <form>
+      <div class="row mb-3 align-items-end">
+        <h4>Role and Interests</h4>
+        <div class="col">
+          <label for="role" class="form-label"
+            >What role do you feel called to play in this movement?</label
+          >
+          <select id="role" class="form-select">
+            <option value="Contributor" selected>Contributor</option>
+            <option value="Organizer">Organizer</option>
+            <option value="Theoritician">Theoritician</option>
+            <option value="Physical Builder">Physical Builder</option>
+            <option value="Digital Builder">Digital Builder</option>
+            <option value="Storyteller">Storyteller</option>
+            <option value="Educator">Educator</option>
+            <option value="Student">Student</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="role-other" class="form-label"
+            >If other, provide a preferred role below.</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="role-other"
+            name="role-other"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="tags" class="form-label"
+            >Provide a list of ideas (tags) that interest you, separating each
+            by a comma. For idea examples refer to the thematic tags for the
+            <a href="{{site.url}}{{site.baseurl}}/resources"
+              >Resource articles</a
+            ></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="tags"
+            name="tags"
+            placeholder="idea1, idea2, idea3, ..."
+          />
+        </div>
+      </div>
+      <h4>Contact Information</h4>
+      <p>Help others connect to you, your work, and the work you support.</p>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="email" class="form-label">*Email Address</label>
+          <input type="text" class="form-control" id="email" name="email" />
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="email-publication" class="form-label"
+            >*Do you want your email to be public?</label
+          >
+          <select id="email-publication" class="form-select">
+            <option value="Yes" selected>Yes</option>
+            <option value="False">No</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="website" class="form-label">Website:</label>
+          <input type="text" class="form-control" id="website" name="website" />
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="social-1" class="form-select"
+            >Social Media Platform</label
+          >
+          <select
+            id="social-1"
+            class="form-control"
+            onchange="handleSelection()"
+          >
+            <option selected>Select One</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="YouTube">YouTube</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Twitter">Twitter</option>
+            <option value="TikTok">Tiktok</option>
+            <option value="Mastodon">Mastodon</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="social-1-handle" class="form-label"
+            >Handle (without "@")</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="social-1-handle"
+            name="social-1-handle"
+          />
+        </div>
+      </div>
+      <h4>Connections</h4>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="place" class="form-label"
+            >Geography (Place where you practice/study/live)</label
+          >
+          <input type="text" class="form-control" id="place" name="place" />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="affiliation-1" class="form-label"
+          >Name of organization you are affiliated with.</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="affiliation-1"
+          name="affiliation-1"
+        />
+        <label for="affiliation-1-title" class="form-label"
+          >Your title within the organization (if applicable)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="affiliation-1-title"
+          name="affiliation-1-title"
+        />
+        <label for="affiliation-1-link" class="form-label"
+          >The organization's website (include https://)</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="affiliation-1-link"
+          name="affiliation-1-link"
+        />
+      </div>
+      <h4>Shout-Outs</h4>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="hashes" class="form-label"
+            >Share important social movements you follow with social media
+            hashtags (omit '#' and separate with commas and no spaces)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="hashes"
+            name="hashes"
+            placeholder="hashtag1, hashtag2, hashtag3, ..."
+          />
+        </div>
+      </div>
+      <div class="row mb-3 align-items-end">
+        <div class="col">
+          <label for="handles" class="form-label"
+            >Share content creators who inspire or inform your work (omit '@'
+            and separate with commas and no spaces)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="handles"
+            name="handles"
+            placeholder="handle1, handle2, handle3, ..."
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-8">
+    <!-- code display area -->
+    <div class="my-4" id="code-display">
+      <div class="row mb-2">
+        <div class="col-12 text-end">
+          <button
+            type="button"
+            class="btn btn-sm btn-light"
+            onclick="copyToClipboard()"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+      <pre class="p-3 mb-0 rounded"><code id="output-frontmatter"></code></pre>
+    </div>
+  </div>
+</div>
+
+<script
+  src="{{ site.url }}{{ site.baseurl }}/assets/js/marked.min.js"
+  async
+></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/purify.min.js"></script>
+
+<!-- Custom Javascript codes-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    copyToClipboard();
+  });
+</script>
+
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/copyToClipboard.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/generateFrontmatterProfile.js"></script>
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/generateCard.js"></script>
+
+<script>
+  // get references to form input elements
+
+  const authorfirstInput = document.getElementById("author-first");
+  const authorlastInput = document.getElementById("author-last");
+  const authordateInput = document.getElementById("author-date");
+  const pronounsInput = document.getElementById("pronouns");
+  const categoriesInput = document.getElementById("categories");
+  const tagsInput = document.getElementById("tags");
+  const hashesInput = document.getElementById("hashes");
+  const roleInput = document.getElementById("role");
+  const roleotherInput = document.getElementById("role-other");
+  const placeInput = document.getElementById("place");
+  const websiteInput = document.getElementById("website");
+  const emailInput = document.getElementById("email");
+  const emailpublicationInput = document.getElementById("email-publication");
+  const social1Input = document.getElementById("social-1");
+  const social1handleInput = document.getElementById("social-1-handle");
+  const affiliation1Input = document.getElementById("affiliation-1");
+  const affiliation1titleInput = document.getElementById("affiliation-1-title");
+  const affiliation1linkInput = document.getElementById("affiliation-1-link");
+  // add event listener to each form input
+
+  authorfirstInput.addEventListener("input", generateFrontmatterProfile);
+  authorlastInput.addEventListener("input", generateFrontmatterProfile);
+  authordateInput.addEventListener("input", generateFrontmatterProfile);
+  pronounsInput.addEventListener("input", generateFrontmatterProfile);
+  categoriesInput.addEventListener("input", generateFrontmatterProfile);
+  tagsInput.addEventListener("input", generateFrontmatterProfile);
+  hashesInput.addEventListener("input", generateFrontmatterProfile);
+  roleInput.addEventListener("input", generateFrontmatterProfile);
+  roleotherInput.addEventListener("input", generateFrontmatterProfile);
+  placeInput.addEventListener("input", generateFrontmatterProfile);
+  websiteInput.addEventListener("input", generateFrontmatterProfile);
+  emailInput.addEventListener("input", generateFrontmatterProfile);
+  emailpublicationInput.addEventListener("input", generateFrontmatterProfile);
+  social1Input.addEventListener("input", generateFrontmatterProfile);
+  social1handleInput.addEventListener("input", generateFrontmatterProfile);
+  affiliation1Input.addEventListener("input", generateFrontmatterProfile);
+  affiliation1titleInput.addEventListener("input", generateFrontmatterProfile);
+  affiliation1linkInput.addEventListener("input", generateFrontmatterProfile);
+</script>
+<script>
+  function handleSelection() {
+    var dropdown = document.getElementById("content-type");
+    var selectedValue = dropdown.value;
+    // Perform actions based on the selected value
+    console.log("Selected value:", selectedValue);
+  }
+</script>
+<script>
+  function copyCodeToClipboard() {
+    const codeElement = document.getElementById("output-frontmatter");
+    const text = codeElement.textContent;
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log("Code copied to clipboard.");
+      })
+      .catch((error) => {
+        console.error(`Error copying code to clipboard: ${error}`);
+      });
+  }
+</script>
