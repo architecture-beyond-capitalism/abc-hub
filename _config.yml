@@ -1,16 +1,12 @@
 title: Your awesome title
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "A space for community to share and grow individual and collective capacities for societal change"
 
-baseurl: "/abc-skeleton-root"
-url: "https://studiobvio.github.io"
-twitter_username: studiobvio
-github_username: studiobvio
+baseurl: "/abc-hub"
+url: "https://architecture-beyond-capitalism.github.io"
+github_username: architecture-beyond-capitalism
 
-repository: "studiobvio/abc-skeleton"
+repository: "architecture-beyond-capitalism/abc-hub"
 
 plugins:
   - jekyll-feed
