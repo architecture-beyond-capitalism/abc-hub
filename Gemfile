@@ -1,30 +1,39 @@
-# frozen_string_literal: true
-
+# Specify the source for Ruby gems
 source "https://rubygems.org"
 
-# gems versions are based on those supported by GitHub Pages, refer to https://pages.github.com/versions/ 
-
+# Define the version of Jekyll
 gem "jekyll", "3.9.3"
 
+# Specify gems for the :jekyll_plugins group, which is for development-related plugins
 group :jekyll_plugins do
-# For site searching
-    gem 'jekyll-sitemap', "~> 1.4.0"
-# For generaton an Atom (RSS-like) feed for jekyll posts
-    gem "jekyll-feed", "~> 0.15.1"
-# For surfacing header tags for seo
-    gem 'jekyll-seo-tag', "~> 2.8.0"
-  end
+  # Generate a sitemap for your Jekyll site
+  gem 'jekyll-sitemap', "~> 1.4.0"
+  
+  # Generate an Atom feed for Jekyll posts
+  gem "jekyll-feed", "~> 0.15.1"
+  
+  # Generate SEO-related meta tags
+  gem 'jekyll-seo-tag', "~> 2.8.0"
+  
+  # Add autoprefixer to your styles
+  gem "jekyll-autoprefixer", "~> 1.0"
+  
+  # Include the github-pages gem configuration for local development
+  gem 'github-pages', '~> 228', group: :jekyll_plugins
+end
 
+# Specify gems used for Markdown parsing, emoji rendering, XML processing, and Sass
+gem 'kramdown', "~> 2.3.2"
+gem 'liquid', "~> 4.0.4"
+gem 'jemoji', "~> 0.12.0"
+gem 'nokogiri', "~> 1.15.2"
+gem 'sass', "~> 3.7.4"
 
-# For generating local proxy server
+# Use the WEBrick HTTP server for local development
 gem "webrick", "~> 1.8"
 
+# Interface to JavaScript runtime (for ExecJS)
 gem "execjs", "2.7.0"
 
-gem "jekyll-autoprefixer", "~> 1.0"
-
-
-gem "github-pages", "228"
-
-# Performance-booster for watching directories on Windows
+# Performance booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
