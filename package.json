@@ -1,22 +1,22 @@
 {
-  "name": "abc-skeleton-root",
+  "name": "abc-hub",
   "version": "1.0.0",
-  "description": "fresh reboot of abc-skeleton trying to get Bootstrap to work again\r https://studiobvio.github.io/abc-skeleton-root/",
+  "description": "fresh reboot of abc-skeleton trying to get Bootstrap to work again\r https://architecture-beyond-capitalism.github.io/abc-hub/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/studiobvio/abc-skeleton-root.git"
+    "url": "git+https://github.com/architecture-beyond-capitalism/abc-hub.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/studiobvio/abc-skeleton-root/issues"
+    "url": "https://github.com/architecture-beyond-capitalism/abc-hub/issues"
   },
-  "homepage": "https://github.com/studiobvio/abc-skeleton-root#readme",
+  "homepage": "https://github.com/architecture-beyond-capitalism/abc-hub#readme",
   "dependencies": {
     "dompurify": "^3.0.1",
     "marked": "^4.3.0"
