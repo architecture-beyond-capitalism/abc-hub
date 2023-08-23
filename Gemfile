@@ -17,13 +17,11 @@ group :jekyll_plugins do
   
   # Add autoprefixer to your styles
   gem "jekyll-autoprefixer", "~> 1.0"
-  
-  # Include the github-pages gem configuration for local development
-  gem 'github-pages', '~> 228', group: :jekyll_plugins
 end
 
 # Specify gems used for Markdown parsing, emoji rendering, XML processing, and Sass
 gem 'kramdown', "~> 2.3.2"
+gem 'kramdown-parser-gfm', "~> 1.1.0"
 gem 'liquid', "~> 4.0.4"
 gem 'jemoji', "~> 0.12.0"
 gem 'nokogiri', "~> 1.15.2"

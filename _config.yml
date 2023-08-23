@@ -11,7 +11,6 @@ repository: "architecture-beyond-capitalism/abc-hub"
 plugins:
   - jekyll-feed
   - jekyll-autoprefixer
-  - github-pages
   - jekyll-sitemap
   - jekyll-seo-tag
 
