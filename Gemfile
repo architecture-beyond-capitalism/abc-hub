@@ -19,7 +19,7 @@ group :jekyll_plugins do
 # For generating local proxy server
 gem "webrick", "~> 1.8"
 
-gem "execjs", "~> 2.7"
+gem "execjs", "2.7.0"
 
 gem "jekyll-autoprefixer", "~> 1.0"
 
