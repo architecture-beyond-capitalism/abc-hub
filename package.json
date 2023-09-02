@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/architecture-beyond-capitalism/abc-hub#readme",
   "dependencies": {
+    "bootstrap": "^5.3.1",
     "dompurify": "^3.0.1",
     "marked": "^4.3.0"
   }
