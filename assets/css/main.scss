@@ -1,9 +1,8 @@
 ---
 ---
-@charset "utf-8";
-@import "bootstrap/bootstrap";
-@import "base";
-@import "bootstrap/vendor/rfs";
+@import "bootstrap/bootstrap.scss";
+@import "base.scss";
+@import "bootstrap/vendor/rfs.scss";
 
 label {
   font-size: smaller;
