@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "bootstrap/bootstrap.scss";
 @import "base.scss";
 @import "bootstrap/vendor/rfs.scss";
@@ -123,4 +124,8 @@ pre code {
 #filter-title {
   font-weight: bold;
   font-size: large;
+}
+
+#footer h1 {
+  font-size: 24px;
 }
